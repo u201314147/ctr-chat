@@ -1,7 +1,8 @@
 
 $(function(){
    	//make connection
-	var socket = io.connect('https://ctr-chat.herokuapp.com/')
+	//var socket = io.connect('http://localhost:3000/')
+   var socket = io.connect('https://ctr-chat.herokuapp.com/')
 
 	//buttons and inputs
 	var message = $("#message")

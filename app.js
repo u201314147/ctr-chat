@@ -359,7 +359,7 @@ if(!config.ssl.use) {
     server = https.createServer(opt, app);
 }
 
-server.listen(process.env.PORT || port)
+server.listen(process.env.PORT, '0.0.0.0')
 server.on('error', onError);
 server.on('listening', onListening);
 

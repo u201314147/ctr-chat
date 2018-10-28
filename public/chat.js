@@ -38,6 +38,10 @@ $(function(){
 	socket.on('typing', (data) => {
 		feedback.html("<p><i>" + data.username + " is typing a message..." + "</i></p>")
 	})
+
+		socket.on('connected', (data) => {
+		feedback.html("<p><i>" + data.username + " connected" + "</i></p>")
+	})
 });
 
 

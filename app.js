@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
 	//default username
 	socket.username = "Anonymous"
 
-    socket.broadcast.emit('New user connected', {username : socket.username})
+    socket.broadcast.emit('connected', {username : socket.username})
     //listen on change_username
     socket.on('change_username', (data) => {
         socket.username = data.username

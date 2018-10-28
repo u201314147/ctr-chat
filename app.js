@@ -46,7 +46,6 @@ if(config.readline.use) {
 app.set('port', port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(favicon(path.join(__dirname,'public/img/favicon.png')));
 app.locals.version = pack.version;
 
 

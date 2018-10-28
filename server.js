@@ -27,7 +27,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
   res.render('home.jade');
 });
-server.listen(listen(process.env.PORT || port));
+server.listen(process.env.PORT || port);
 // app.listen(appPort);
 console.log("Server listening on port " + appPort);
 

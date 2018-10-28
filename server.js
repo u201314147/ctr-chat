@@ -27,6 +27,8 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
   res.render('home.jade');
 });
+
+//server.listen(appPort);
 server.listen(process.env.PORT, '0.0.0.0');
 // app.listen(appPort);
 console.log("Server listening on port " + appPort);
@@ -47,17 +49,21 @@ io.sockets.on('connection', function (socket) { // First connection
 		}
 	});
 	socket.on('setPseudo', function (data) { // Assign a name to the user
-		if (pseudoArray.indexOf(data) == -1) // Test if the name is already taken
-		{
-			pseudoArray.push(data);
-			socket.nickname = data;
+	//	if (pseudoArray.indexOf(data) == -1) // Test if the name is already taken
+	//	{
+			//pseudoArray.push(data);
+
+			socket.nickname = data + "#" + Math.floor((Math.random() * 1000) + 1);
 			socket.emit('pseudoStatus', 'ok');
 			console.log("user " + data + " connected");
-		}
-		else
-		{
-			socket.emit('pseudoStatus', 'error') // Send the error
-		}
+	//	}
+		//else
+		//{
+		//	socket.nickname = data + "#" + Math.floor((Math.random() * 1000) + 1);
+		//	socket.emit('pseudoStatus', 'ok');
+	//		console.log("user " + socket.nickname + " connected");
+			//socket.emit('pseudoStatus', 'error') // Send the error
+		//}
 	});
 	socket.on('disconnect', function () { // Disconnection of the client
 		users -= 1;

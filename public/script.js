@@ -32,7 +32,7 @@ $(function() {
 	$("#alertPseudo").hide();
 	$('#modalPseudo').modal('show');
 	$("#pseudoSubmit").click(function() {setPseudo()});
-	$("#chatEntries").slimScroll({height: '600px'});
+	$("#chatEntries").slimScroll({height: '200px'});
 	submitButton.click(function() {sentMessage();});
 	setHeight();
 	$('#messageInput').keypress(function (e) {
@@ -107,6 +107,6 @@ function time() {
 	});
 }
 function setHeight() {
-	$(".slimScrollDiv").height('603');
+	$(".slimScrollDiv").height('203');
 	$(".slimScrollDiv").css('overflow', 'visible')
 }

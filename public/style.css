@@ -696,7 +696,7 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
     border-radius: 5px;
     background-color: rgba(0,0,0,.05);
     margin-bottom: 20px;
-    height: 250px;
+    height: 350px;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 .message {

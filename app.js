@@ -16,7 +16,7 @@ var path = require('path');
 
 
 /* Config */
-var port = utils.normalizePort(process.env.PORT, '0.0.0.0');
+var port = utils.normalizePort(config.port);
 var app = express();
 var server;
 
